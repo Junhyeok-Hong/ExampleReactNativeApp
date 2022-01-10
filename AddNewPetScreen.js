@@ -1,0 +1,182 @@
+import { StatusBar } from "expo-status-bar";
+import React, { useState } from "react";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TextInput,
+  Button,
+  TouchableOpacity,
+  SafeAreaView,
+  ScrollView,
+  Dimensions,
+} from "react-native";
+
+export default function AddNewPetScreen() {
+  return (
+    <SafeAreaView style={styles.container}>
+      <ScrollView style={styles.scrollView}>
+        <View style={styles.imageView}>
+          <Image
+            style={styles.image}
+            source={require("./assets/favicon.png")}
+          />
+        </View>
+
+        <StatusBar style="auto" />
+        <View style={styles.inputView}>
+          <TextInput
+            style={styles.TextInput}
+            placeholder="Name"
+            placeholderTextColor="#003f5c"
+            secureTextEntry={false}
+          />
+        </View>
+
+        <View style={styles.inputView}>
+          <TextInput
+            style={styles.TextInput}
+            placeholder="Age"
+            placeholderTextColor="#003f5c"
+            secureTextEntry={false}
+          />
+        </View>
+
+        <View style={styles.inputView}>
+          <TextInput
+            style={styles.TextInput}
+            placeholder="Gender"
+            placeholderTextColor="#003f5c"
+            secureTextEntry={false}
+          />
+        </View>
+
+        <View style={styles.inputView}>
+          <TextInput
+            style={styles.TextInput}
+            placeholder="Birth Date"
+            placeholderTextColor="#003f5c"
+            secureTextEntry={false}
+          />
+        </View>
+
+        <View style={styles.inputView}>
+          <TextInput
+            style={styles.TextInput}
+            placeholder="Animal / Breed"
+            placeholderTextColor="#003f5c"
+            secureTextEntry={false}
+          />
+        </View>
+
+        <View style={styles.inputView}>
+          <TextInput
+            style={styles.TextInput}
+            placeholder="Age"
+            placeholderTextColor="#003f5c"
+            secureTextEntry={false}
+          />
+        </View>
+
+        <View style={styles.inputView}>
+          <TextInput
+            style={styles.TextInput}
+            placeholder="Weight"
+            placeholderTextColor="#003f5c"
+            secureTextEntry={false}
+          />
+        </View>
+
+        <View style={styles.inputView}>
+          <TextInput
+            style={styles.TextInput}
+            placeholder="Table of Vaccination Data"
+            placeholderTextColor="#003f5c"
+            secureTextEntry={false}
+          />
+        </View>
+
+        <View style={styles.inputView}>
+          <TextInput
+            style={styles.TextInput}
+            placeholder="Notes"
+            placeholderTextColor="#003f5c"
+            secureTextEntry={false}
+          />
+        </View>
+
+        <View style={styles.lineStyle} />
+
+        <TouchableOpacity style={styles.doneBtn}>
+          <Text style={styles.loginText}>DONE</Text>
+        </TouchableOpacity>
+      </ScrollView>
+    </SafeAreaView>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    paddingTop: StatusBar.currentHeight,
+  },
+
+  scrollView: {
+    backgroundColor: "black",
+  },
+
+  imageView: {
+    marginTop: 50,
+    marginBottom: 50,
+    alignSelf: "center",
+    backgroundColor: "black",
+    height: Dimensions.get("window").height * 0.1,
+    width: Dimensions.get("window").height * 0.1,
+    borderRadius: Math.round(
+      (Dimensions.get("window").height + Dimensions.get("window").width) / 2
+    ),
+  },
+
+  image: {
+    height: "100%",
+    width: "100%",
+    position: "absolute",
+  },
+
+  inputView: {
+    backgroundColor: "#DCDCDC",
+    width: "70%",
+    height: 45,
+    marginBottom: 20,
+    alignItems: "center",
+    alignSelf: "center",
+  },
+
+  TextInput: {
+    height: 50,
+    flex: 1,
+    padding: 10,
+    marginLeft: 20,
+  },
+
+  lineStyle: {
+    width: "90%",
+    alignItems: "center",
+    borderWidth: 1,
+    borderColor: "#D3D3D3",
+    margin: 10,
+  },
+
+  doneBtn: {
+    width: "70%",
+    height: 50,
+    alignItems: "center",
+    alignSelf: "center",
+    justifyContent: "center",
+    marginTop: 20,
+    marginBottom: 20,
+    backgroundColor: "#D3D3D3",
+  },
+});
