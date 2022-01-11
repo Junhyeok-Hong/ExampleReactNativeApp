@@ -3,7 +3,7 @@ import ListScreen from "./ListScreen.js";
 import AddNewPetScreen from "./AddNewPetScreen.js";
 
 export default function App() {
-  //return AddNewPetScreen();
+  return AddNewPetScreen();
   //return LoginScreen();
-  return ListScreen();
+  //return ListScreen();
 }

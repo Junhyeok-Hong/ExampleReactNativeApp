@@ -1,3 +1,12 @@
+/* 
+The Calendar is from react-native-calendars
+- https://github.com/wix/react-native-calendars
+Table is from react-native-paper
+- https://github.com/callstack/react-native-paper
+Flexbox is from react-native-easy-grid
+- https://github.com/GeekyAnts/react-native-easy-grid#readme
+*/
+
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import {
@@ -12,6 +21,8 @@ import {
   ScrollView,
   Dimensions,
 } from "react-native";
+import { Calendar, CalendarList, Agenda } from "react-native-calendars";
+import { DataTable } from "react-native-paper";
 
 export default function AddNewPetScreen() {
   return (
@@ -37,15 +48,6 @@ export default function AddNewPetScreen() {
         <View style={styles.inputView}>
           <TextInput
             style={styles.TextInput}
-            placeholder="Age"
-            placeholderTextColor="#003f5c"
-            secureTextEntry={false}
-          />
-        </View>
-
-        <View style={styles.inputView}>
-          <TextInput
-            style={styles.TextInput}
             placeholder="Gender"
             placeholderTextColor="#003f5c"
             secureTextEntry={false}
@@ -61,19 +63,12 @@ export default function AddNewPetScreen() {
           />
         </View>
 
-        <View style={styles.inputView}>
-          <TextInput
-            style={styles.TextInput}
-            placeholder="Animal / Breed"
-            placeholderTextColor="#003f5c"
-            secureTextEntry={false}
-          />
-        </View>
+        <Calendar style={styles.calendarview}> </Calendar>
 
         <View style={styles.inputView}>
           <TextInput
             style={styles.TextInput}
-            placeholder="Age"
+            placeholder="Animal / Breed"
             placeholderTextColor="#003f5c"
             secureTextEntry={false}
           />
@@ -96,6 +91,32 @@ export default function AddNewPetScreen() {
             secureTextEntry={false}
           />
         </View>
+
+        <DataTable style={styles.dataTableView}>
+          <DataTable.Header>
+            <DataTable.Title>Vaccination</DataTable.Title>
+            <DataTable.Title>Date</DataTable.Title>
+            <DataTable.Title>Location</DataTable.Title>
+          </DataTable.Header>
+
+          <DataTable.Row>
+            <DataTable.Cell>Vac1</DataTable.Cell>
+            <DataTable.Cell>2022-01-01</DataTable.Cell>
+            <DataTable.Cell>Oakville</DataTable.Cell>
+          </DataTable.Row>
+
+          <DataTable.Row>
+            <DataTable.Cell>Vac2</DataTable.Cell>
+            <DataTable.Cell>2021-12-31</DataTable.Cell>
+            <DataTable.Cell>Vancouver</DataTable.Cell>
+          </DataTable.Row>
+
+          <DataTable.Row>
+            <DataTable.Cell>Vac3</DataTable.Cell>
+            <DataTable.Cell>2022-01-11</DataTable.Cell>
+            <DataTable.Cell>Toronto</DataTable.Cell>
+          </DataTable.Row>
+        </DataTable>
 
         <View style={styles.inputView}>
           <TextInput
@@ -161,12 +182,25 @@ const styles = StyleSheet.create({
     marginLeft: 20,
   },
 
+  calendarview: {
+    width: "70%",
+    marginBottom: 20,
+    alignSelf: "center",
+  },
+
   lineStyle: {
     width: "90%",
     alignItems: "center",
     borderWidth: 1,
     borderColor: "#D3D3D3",
     margin: 10,
+  },
+
+  dataTableView: {
+    width: "70%",
+    marginBottom: 20,
+    alignSelf: "center",
+    backgroundColor: "white",
   },
 
   doneBtn: {
