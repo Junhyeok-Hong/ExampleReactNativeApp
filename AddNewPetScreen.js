@@ -5,6 +5,9 @@ Table is from react-native-paper
 - https://github.com/callstack/react-native-paper
 Flexbox is from react-native-easy-grid
 - https://github.com/GeekyAnts/react-native-easy-grid#readme
+
+Reference website:
+- https://www.kindacode.com/article/how-to-implement-tables-in-react-native/
 */
 
 import { StatusBar } from "expo-status-bar";
