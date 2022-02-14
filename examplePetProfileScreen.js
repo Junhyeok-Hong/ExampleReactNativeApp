@@ -28,7 +28,7 @@ import { Calendar, CalendarList, Agenda } from "react-native-calendars";
 import { DataTable } from "react-native-paper";
 import { Col, Row, Grid } from "react-native-easy-grid";
 
-export default function examplePetProfileScreen() {
+export default function ExamplePetProfileScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <Grid>

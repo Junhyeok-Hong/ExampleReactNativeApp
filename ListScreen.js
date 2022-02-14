@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     alignSelf: "center",
     flexDirection: "row",
-    backgroundColor: "rgba(240, 255, 255, 0.5)",
+    backgroundColor: "rgba(227, 253, 253, 0.1)",
   },
   item_text_view: {
     marginHorizontal: "10%",

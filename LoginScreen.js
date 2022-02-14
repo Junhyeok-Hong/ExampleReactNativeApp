@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import React, { useState } from "react";
+//import React, { useState } from "react";
 import {
   StyleSheet,
   Text,
@@ -8,9 +8,15 @@ import {
   TextInput,
   Button,
   TouchableOpacity,
+  Alert,
 } from "react-native";
 
-export default function LoginScreen() {
+import * as React from "react";
+import { useState } from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+export default function LoginScreen({ navigation }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -44,13 +50,26 @@ export default function LoginScreen() {
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.loginBtn}>
-        <Text style={styles.loginText}>LOGIN</Text>
+        <Text
+          style={styles.loginText}
+          onPress={() => navigation.navigate("List")}
+        >
+          LOGIN
+        </Text>
       </TouchableOpacity>
 
       <View style={styles.lineStyle} />
 
       <TouchableOpacity style={styles.loginBtn}>
-        <Text style={styles.loginText}>SIGN UP</Text>
+        <Text
+          style={styles.loginText}
+          onPress={() => {
+            Alert.alert(email);
+            Alert.alert(password);
+          }}
+        >
+          SIGN UP
+        </Text>
       </TouchableOpacity>
     </View>
   );
