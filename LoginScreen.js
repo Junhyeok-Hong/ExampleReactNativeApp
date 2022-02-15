@@ -50,25 +50,27 @@ export default function LoginScreen({ navigation }) {
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.loginBtn}>
-        <Text
-          style={styles.loginText}
-          onPress={() => navigation.navigate("List")}
-        >
-          LOGIN
-        </Text>
+        <Text style={styles.loginText}>LOGIN</Text>
       </TouchableOpacity>
 
       <View style={styles.lineStyle} />
 
       <TouchableOpacity style={styles.loginBtn}>
+        <Text style={styles.loginText}>SIGN UP</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity>
         <Text
-          style={styles.loginText}
+          style={styles.forgot_button}
           onPress={() => {
+            {
+              navigation.navigate("List");
+            }
             Alert.alert(email);
             Alert.alert(password);
           }}
         >
-          SIGN UP
+          Continue as Guest
         </Text>
       </TouchableOpacity>
     </View>

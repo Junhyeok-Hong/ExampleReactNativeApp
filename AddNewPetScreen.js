@@ -11,7 +11,7 @@ Reference website:
 */
 
 import { StatusBar } from "expo-status-bar";
-import React, { useState } from "react";
+//import React, { useState } from "react";
 import {
   StyleSheet,
   Text,
@@ -26,8 +26,21 @@ import {
 } from "react-native";
 import { Calendar, CalendarList, Agenda } from "react-native-calendars";
 import { DataTable } from "react-native-paper";
+import * as React from "react";
+import { useState } from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { DATA } from "./Data.js";
 
-export default function AddNewPetScreen() {
+const pet2Image = require("./assets/pug-2648774_1920.jpeg");
+const pet3Image = require("./assets/domestic-dog_thumb_4x3.webp");
+
+export default function AddNewPetScreen({ navigation }) {
+  const [name, setName] = useState("");
+  const [gender, setGender] = useState("");
+  const [weight, setWeight] = useState("");
+  const [age, setAge] = useState("");
+  const [description, setDescription] = useState("");
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.scrollView}>
@@ -45,6 +58,7 @@ export default function AddNewPetScreen() {
             placeholder="Name"
             placeholderTextColor="#003f5c"
             secureTextEntry={false}
+            onChangeText={(name) => setName(name)}
           />
         </View>
 
@@ -54,6 +68,7 @@ export default function AddNewPetScreen() {
             placeholder="Gender"
             placeholderTextColor="#003f5c"
             secureTextEntry={false}
+            onChangeText={(gender) => setGender(gender)}
           />
         </View>
 
@@ -63,6 +78,7 @@ export default function AddNewPetScreen() {
             placeholder="Birth Date"
             placeholderTextColor="#003f5c"
             secureTextEntry={false}
+            onChangeText={(age) => setAge(age)}
           />
         </View>
 
@@ -83,6 +99,7 @@ export default function AddNewPetScreen() {
             placeholder="Weight"
             placeholderTextColor="#003f5c"
             secureTextEntry={false}
+            onChangeText={(weight) => setWeight(weight)}
           />
         </View>
 
@@ -127,13 +144,34 @@ export default function AddNewPetScreen() {
             placeholder="Notes"
             placeholderTextColor="#003f5c"
             secureTextEntry={false}
+            onChangeText={(description) => setDescription(description)}
           />
         </View>
 
         <View style={styles.lineStyle} />
 
         <TouchableOpacity style={styles.doneBtn}>
-          <Text style={styles.loginText}>DONE</Text>
+          <Text
+            style={styles.loginText}
+            onPress={() => {
+              {
+                DATA.push({
+                  key: "key2",
+                  image: pet2Image,
+                  name: name,
+                  gender: gender,
+                  weight: weight,
+                  age: age,
+                  description: description,
+                });
+              }
+              {
+                navigation.navigate("List");
+              }
+            }}
+          >
+            DONE
+          </Text>
         </TouchableOpacity>
       </ScrollView>
     </SafeAreaView>
