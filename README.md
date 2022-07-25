@@ -59,9 +59,22 @@ Not this:
 ```
 
 ### 8. Avoid using State (if possible)
-- Avoid using state as much as possible since the more state you use, the more data you have to keep track of across the app
+Avoid using state as much as possible since the more state you use, the more data you have to keep track of across the app
 
 ### 9. Avoid using Indexes as Key Props
 Use unique values as the index to ensure identity of the list item
 
 # Folder Structure
+├── src
+│   ├── assets
+│   │  ├── fonts
+│   │  ├── images
+│   ├── components
+│   │  ├── atoms
+│   │  ├── molecules
+│   │  ├── organisms
+│   ├── navigations
+│   ├── scenes
+│   ├── styles
+│   ├── utils
+│   ├── index.js
