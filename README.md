@@ -28,21 +28,21 @@ f. Import ‘./<some file>.<some extension>
 
 ### 5. Always name React components
 Do this: 
-'''
+```
 export default function Products () { return <div>...</div> )
-'''
+```
 Not this: 
-'''
+```
 export default () => <div>...</div>
-'''
+```
 - The component name should be PascalCase
 - Method names should be in camelCase
 
 ### 6. Use destructuring to remove redundancy (for Props)
 i.e. 
-'''
+```
 const {value 1, value 2, value 3, value 4} = props.values;
-'''
+```
 
 ### 7. Always prefer passing the entire object instead of primitive values
 Do this: <b> <StudentAccount user={user} /> </b>
