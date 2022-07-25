@@ -1,70 +1,52 @@
-# ExampleReactNativeApp
+<div align="center">
+<!-- Title: -->
+  <h1>Structure Guideline & Coding Standards</h1>
+</div>
 
-Example Application for React Native
+# Coding Standards
 
-## Process of beginning work on React Native project
+### 1. Naming Conventions
+All folders are in camelCase
+All files are in PascalCase
+i.e. src/App.js
 
-1. Navigate to project directory
-2. `code .`
-3. `npm start`
-4. Open Android Studio -> AVD Manager -> Select Device
-5. Start up the iOS & Android simulators on Metro Bundler
-6. Code!
+### 2. Ordering of imports
+a. React import
+b. Library imports (Alphabetical order)
+c. Absolute imports from the project (Alphabetical order)
+d. Relative imports (Alphabetical order)
+e. Import * as
+f. Import ‘./<some file>.<some extension>
 
-## Setting Up Expo (for Mac)
+### 3. Use functional components
+- Components have Two types: a class component and a functional component.
+- Class components are simple classes that are stateful and have internal state and life cycle methods. Functional components are stateless. But by using react hooks, it can act as a stateful component. The functional components accept props as arguments and return React elements.
+- Use functional components and hooks more often as they result in more concise and readable code compared to classes.
 
-Note: Depending on the administrative level, might need to add `sudo` in front of some of these commands
+### 4. Keep components small and separate functionalities
+- No more than 200 lines per component (if possible)
 
-To install the necessary packages:
-`npm install -g expo-cli`
+### 5. Always name React components
+Do this: <b> export default function Products () { return <div>...</div> ) </b>
+Not this: </b> export default () => <div>...</div> </b>
+- The component name should be PascalCase
+- Method names should be in camelCase
 
-To start a fresh new project:
-`expo init <Name of Project>`
+### 6. Use destructuring to remove redundancy (for Props)
+i.e. <b> const {value 1, value 2, value 3, value 4} = props.values; </b>
 
-To run the project (first navigate to project directory):
-This command will open the Metro Bundler
-`npm start`
+### 7. Always prefer passing the entire object instead of primitive values
+Do this: <b> <StudentAccount user={user} /> </b>
+Not this: <b> <StudentAccount
+              name={user.name}
+              email={user.email}
+              id={user.id}
+              /> </b>
 
-Other commands (you can also do all of these commands through the Metro Bundler):
+### 8. Avoid using State (if possible)
+- Avoid using state as much as possible since the more state you use, the more data you have to keep track of across the app
 
-```
-npm run android
-npm run ios
-npm run web
-```
+### 9. Avoid using Indexes as Key Props
+Use unique values as the index to ensure identity of the list item
 
-## Setting Up Simulator (for Mac)
-
-### iOS Simulator
-
-Simply install Xcode
-Note: when first time installing, go to 'Preferences' -> 'Locations' and make sure that you have the latest Command Line Tools
-Then you can open simulator through XCode or by running the commands above (it will be automatic for a Mac device)
-
-To open developer menu within the simulator:
-⌘ + d
-if above does not work:
-ctrl + d and then ⌘ + d
-
-### Android Device
-
-Install Android Studio
-Configuration requirements: https://docs.expo.dev/workflow/android-studio-emulator/
-After installation & configuration are complete, navigate to the Android Studio GUI and select AVD Manager
-Then select necessary device
-
-To open developer menu within the simulator:
-⌘ + m
-
-## Text Editor (for Mac)
-
-Visual Studio Code Extensions:
-
-```
-React Native Tools (Recommended)
-React-Native/React/Redux snippets for es6/es7 (Recommended)
-Prettier - code formatter (optional)
-Material Icon Theme (optional)
-```
-
-Then if we have all the above extensions, enable 'Format On Save' Feature in VSCode
+# Folder Structure
