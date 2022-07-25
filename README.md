@@ -45,12 +45,18 @@ const {value 1, value 2, value 3, value 4} = props.values;
 ```
 
 ### 7. Always prefer passing the entire object instead of primitive values
-Do this: <b> <StudentAccount user={user} /> </b>
-Not this: <b> <StudentAccount
-              name={user.name}
-              email={user.email}
-              id={user.id}
-              /> </b>
+Do this: 
+```
+<StudentAccount user={user} />
+```
+Not this:
+``` 
+<StudentAccount
+     name={user.name}
+     email={user.email}
+     id={user.id}
+/>
+```
 
 ### 8. Avoid using State (if possible)
 - Avoid using state as much as possible since the more state you use, the more data you have to keep track of across the app
