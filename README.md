@@ -65,25 +65,27 @@ Avoid using state as much as possible since the more state you use, the more dat
 Use unique values as the index to ensure identity of the list item
 
 # Folder Structure
-├── src\
-│   ├── assets\
-│   │  ├── fonts\
-│   │  ├── images\
-│   ├── components\
-│   │  ├── atoms\
-│   │  ├── molecules\
-│   │  ├── organisms\
-│   ├── scenes\
-│   ├── navigation\
-│   ├── styles\
-│   ├── utils\
-│   ├── index.js\
+```
+├── src
+│   ├── assets
+│   │  ├── fonts
+│   │  ├── images
+│   ├── components
+│   │  ├── atoms
+│   │  ├── molecules
+│   │  ├── organisms
+│   ├── scenes
+│   ├── navigation
+│   ├── styles
+│   ├── utils
+│   ├── index.js
+```
 ### Assets
 - Contains all fonts & images
 ### Components - Atomic Design
-– Atoms – The smallest possible components such as buttons, titles and inputs
-– Molecules – Composition of one or more components of atoms
-– Organisms – Combination of molecules that work together or even with atoms that compose more elaborate interfaces
+– Atoms – The smallest possible components such as buttons, titles and inputs\
+– Molecules – Composition of one or more components of atoms\
+– Organisms – Combination of molecules that work together or even with atoms that compose more elaborate interfaces\
 ### Scenes
 - Contains all screens / pages
 ### Navigation
