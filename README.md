@@ -6,16 +6,16 @@
 # Coding Standards
 
 ### 1. Naming Conventions
-All folders are in camelCase
-All files are in PascalCase
+All folders are in camelCase\
+All files are in PascalCase\
 i.e. src/App.js
 
 ### 2. Ordering of imports
-a. React import
-b. Library imports (Alphabetical order)
-c. Absolute imports from the project (Alphabetical order)
-d. Relative imports (Alphabetical order)
-e. Import * as
+a. React import\
+b. Library imports (Alphabetical order)\
+c. Absolute imports from the project (Alphabetical order)\
+d. Relative imports (Alphabetical order)\
+e. Import * as\
 f. Import ‘./<some file>.<some extension>
 
 ### 3. Use functional components
