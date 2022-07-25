@@ -64,6 +64,7 @@ Avoid using state as much as possible since the more state you use, the more dat
 ### 9. Avoid using Indexes as Key Props
 Use unique values as the index to ensure identity of the list item
 
+  
 # Folder Structure
 ```
 ├── src
@@ -96,3 +97,12 @@ Use unique values as the index to ensure identity of the list item
 - Contains all 'shared' styles across the application
 ### Utils
 - Contains all the utility/helper methods that can be used across the entire application
+
+  
+# References
+- https://www.waldo.com/blog/react-native-project-structure
+- https://cheesecakelabs.com/blog/efficient-way-structure-react-native-projects/
+- https://samanw.medium.com/reactnative-best-practices-with-best-folder-structure-6d2716d3d9cb
+- https://gilshaan.medium.com/react-native-coding-standards-and-best-practices-5b4b5c9f4076#:~:text=Naming%20Conventions,of%20each%20word%20is%20capitalized
+- https://www.makeuseof.com/must-follow-react-practices/
+- https://www.enprowess.com/blogs/react-best-practices/
