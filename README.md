@@ -65,16 +65,32 @@ Avoid using state as much as possible since the more state you use, the more dat
 Use unique values as the index to ensure identity of the list item
 
 # Folder Structure
-├── src
-│   ├── assets
-│   │  ├── fonts
-│   │  ├── images
-│   ├── components
-│   │  ├── atoms
-│   │  ├── molecules
-│   │  ├── organisms
-│   ├── navigations
-│   ├── scenes
-│   ├── styles
-│   ├── utils
-│   ├── index.js
+├── src\
+│   ├── assets\
+│   │  ├── fonts\
+│   │  ├── images\
+│   ├── components\
+│   │  ├── atoms\
+│   │  ├── molecules\
+│   │  ├── organisms\
+│   ├── scenes\
+│   ├── navigation\
+│   ├── styles\
+│   ├── utils\
+│   ├── index.js\
+### Assets
+- Contains all fonts & images
+### Components - Atomic Design
+– Atoms – The smallest possible components such as buttons, titles and inputs
+– Molecules – Composition of one or more components of atoms
+– Organisms – Combination of molecules that work together or even with atoms that compose more elaborate interfaces
+### Scenes
+- Contains all screens / pages
+### Navigation
+- This is just an example of what would happen when we bring in a major 3rd library
+- For instance if we use redux, we may also create a folder called 'reducers'
+- Another instance would be creating a folder called 'auth'
+### Styles
+- Contains all 'shared' styles across the application
+### Utils
+- Contains all the utility/helper methods that can be used across the entire application
