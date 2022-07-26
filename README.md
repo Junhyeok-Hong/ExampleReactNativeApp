@@ -86,7 +86,7 @@ Use unique values as the index to ensure identity of the list item
 ### Components - Atomic Design
 – Atoms – The smallest possible components such as buttons, titles and inputs\
 – Molecules – Composition of one or more components of atoms\
-– Organisms – Combination of molecules that work together or even with atoms that compose more elaborate interfaces\
+– Organisms – Combination of molecules that work together or even with atoms that compose more elaborate interfaces
 ### Scenes
 - Contains all screens / pages
 ### Navigation
